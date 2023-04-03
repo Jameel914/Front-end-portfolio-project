@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Righteous", sans-serif;
+}
+
+h1 {
+    color: darkgreen;
+    text-align: center;
+    padding-top: 15px;
+    
+}
+
+body {
+    background-color: rgb(177, 205, 214);
+}
+
+.countries {
+    background-color: white;
+    width: 80vw;
+    max-width: 600px;
+    padding: 50px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    border: 2px solid darkgreen;
+    
+}
+
+.country-search {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+}
+
+.country-search button {
+    background-color: darkgreen;
+    padding: 8px 0;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+}
+
+button:active,
+button:focus {
+    background-color: lightgreen;
+    color: black;
+}
+
+.country-search .form-select {
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid darkgreen;
+}
+
+.countries .flag-img {
+    display: block;
+    width: 45%;
+    min-width: 120px;
+    margin: 30px auto 20px auto;
+}
+
+.countries h2 {
+    font-weight: 500;
+    text-align: center;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .country-search {
+        
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #result {
+        text-align: center;
+    }
+
+    body {
+        grid-template-columns: 1fr;
+        display: none;
+    }
+    
+   
+}
