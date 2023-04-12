@@ -12,9 +12,6 @@ h1 {
     
 }
 
-body {
-    background-color: rgb(177, 205, 214);
-}
 
 .countries {
     background-color: white;
@@ -75,21 +72,32 @@ button:focus {
     margin-bottom: 30px;
 }
 
+#search-button {
+    cursor: pointer;
+}
+
+body {
+    background-image: url("image.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-color: rgb(177, 205, 214);
+    
+}
+
+
 @media (max-width: 768px) {
-    .country-search {
+    body, h1, .country-search {
         
-        grid-template-columns: 1fr;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
     }
 
     #result {
         text-align: center;
     }
-
-    body {
-        grid-template-columns: 1fr;
-        display: none;
-    }
     
-   
 }
+

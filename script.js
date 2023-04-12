@@ -10,6 +10,7 @@ const options = {
 const button = document.getElementById("search-button");
 const country = document.getElementById("country");
 
+
 button.addEventListener("click", (event) => {
 	event.preventDefault();
 	console.log("yes");
@@ -17,6 +18,9 @@ button.addEventListener("click", (event) => {
 	let countryName = country.value;
     console.log(countryName);
 
+	if (countryName === "") {
+		alert("Please select country name");
+	}
 
 
 fetch(`https://world-geo-data.p.rapidapi.com/countries/${countryName}?language=en%2Cru%2Czh%2Ces%2Car%2Cfr%2Cfa%2Cja%2Cpl%2Cit%2Cpt%2Cde`, options)
@@ -28,13 +32,14 @@ fetch(`https://world-geo-data.p.rapidapi.com/countries/${countryName}?language=e
 		<img src="${data.flag.file}" class = "flag-img">
 		<h2>${data.name}</h2>
         
-		<h4>Capital: ${data.capital.name}</h4> <br />
-		<h4>Continent: ${data.continent.name}</h4> <br />
-		<h4>Population: ${data.population}</h4> <br />
-		<h4>Currency: ${data.currency.name}</h4> <br />`
+		<li>Capital: ${data.capital.name}</li> <br />
+		<li>Continent: ${data.continent.name}</li> <br />
+		<li>Population: ${data.population}</li> <br />
+		<li>Currency: ${data.currency.name}</li> <br />`
 	})
 	.catch(err => console.error(err));
 
 });
+
 
 
